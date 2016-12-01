@@ -9,7 +9,7 @@ class UF {
   }
 
   root ( i ) {
-    while ( this.id[i] !== i )
+    while ( i !== this.id[i] )
       i = this.id[i];
     return i;
   }
@@ -19,11 +19,9 @@ class UF {
   }
 
   union ( p, q ) {
-    if ( ! this.connected( p, q ) ) {
-      let rp = this.root( p );
-      let rq = this.root( q );
-      this.id[rp] = rq;
-    }
+    let rp = this.root( p );
+    let rq = this.root( q );
+    this.id[rp] = rq;
   }
 
 }

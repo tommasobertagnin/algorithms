@@ -1,7 +1,7 @@
 'use strict';
 
 // the union find class
-const UF = require('./UF');
+const UF = require('./UF-quick-find');
 
 // reference for the union find object
 let uf;
